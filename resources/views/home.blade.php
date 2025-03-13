@@ -33,7 +33,7 @@
                                 {{ $post->description }}</p>
                             <div class="flex gap-4 items-center pb-4">
                                 <div>
-                                    <img class="w-10 h-10 rounded-full" src="{{ $post->image }}" alt="Rounded avatar">
+                                    <img class="w-10 h-10 rounded-full" src="{{ $post->user->image }}" alt="Rounded avatar">
                                 </div>
                                 <div>
                                     <p class="text-sm font-medium text-white">{{ $post->user->name }}</p>
