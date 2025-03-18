@@ -20,7 +20,8 @@
                         </a>
                         <div class="p-5">
                             <div class="pb-4 flex gap-4 items-center">
-                                <p class="text-xs text-gray-500">{{ $post->created_at }}</p>
+                                <p class="text-xs text-gray-500">
+                                    {{ \Carbon\Carbon::parse($post->user->created_at)->format('d/m/Y') }}</p>
                                 <a href="#"
                                     class="bg-blue-900 text-white text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
                                     {{ $post->category }}</a>
@@ -37,6 +38,9 @@
                                 </div>
                                 <div>
                                     <p class="text-sm font-medium text-white">{{ $post->user->name }}</p>
+                                    <p class="text-xs text-gray-500">
+                                        {{ \Carbon\Carbon::parse($post->user->created_at)->format('d/m/Y') }}
+                                    </p>
                                 </div>
                             </div>
                             <a href="{{ route('posts.show', $post->id) }}"
